@@ -56,7 +56,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 print(json.dumps(query, indent=2))
             self.serve_file('contacts.html')
         elif path.startswith('/static/'):
-            self.serve_static(path[8:])  # Remove '/static/' from the path
+            self.serve_static(path[8:])  
         else:
             self.serve_404()
 
